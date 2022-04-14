@@ -60,13 +60,13 @@
           "disabled": false,
           "maxTurnCount": 3,
           "alwaysPrompt": false,
-          "allowInterruptions": false,
+          "allowInterruptions": true,
           "prompt": "${ConfirmInput_Prompt_sUEm7J()}",
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
-          "defaultValueResponse": "",
           "choiceOptions": {
-            "includeNumbers": true
+            "includeNumbers": true,
+            "inlineOrMore": ", or "
           },
           "property": "dialog.Confirm",
           "confirmChoices": [

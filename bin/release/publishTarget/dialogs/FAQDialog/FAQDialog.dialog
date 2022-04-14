@@ -194,11 +194,10 @@
               "disabled": false,
               "maxTurnCount": 3,
               "alwaysPrompt": false,
-              "allowInterruptions": false,
+              "allowInterruptions": true,
               "prompt": "${TextInput_Prompt_HE5WZz()}",
               "unrecognizedPrompt": "",
               "invalidPrompt": "",
-              "defaultValueResponse": "",
               "property": "dialog.name"
             },
             {
@@ -209,12 +208,14 @@
               "disabled": false,
               "maxTurnCount": 3,
               "alwaysPrompt": false,
-              "allowInterruptions": false,
+              "allowInterruptions": true,
               "unrecognizedPrompt": "",
-              "invalidPrompt": "",
-              "defaultValueResponse": "",
+              "invalidPrompt": "${TextInput_InvalidPrompt_BV5XVR()}",
               "prompt": "${TextInput_Prompt_BV5XVR()}",
-              "property": "dialog.email"
+              "property": "dialog.email",
+              "validations": [
+                "=isMatch(this.value, \"\\S+@+\\S+\\.\\S+\")"
+              ]
             },
             {
               "$kind": "Microsoft.TextInput",
@@ -224,12 +225,14 @@
               "disabled": false,
               "maxTurnCount": 3,
               "alwaysPrompt": false,
-              "allowInterruptions": false,
+              "allowInterruptions": true,
               "prompt": "${TextInput_Prompt_ep3nfK()}",
               "unrecognizedPrompt": "",
-              "invalidPrompt": "",
-              "defaultValueResponse": "",
-              "property": "dialog.phone"
+              "invalidPrompt": "${TextInput_InvalidPrompt_ep3nfK()}",
+              "property": "dialog.phone",
+              "validations": [
+                "=isMatch(this.value, \"^[0-9]+$\")"
+              ]
             },
             {
               "$kind": "Microsoft.TextInput",
@@ -239,12 +242,28 @@
               "disabled": false,
               "maxTurnCount": 3,
               "alwaysPrompt": false,
-              "allowInterruptions": false,
+              "allowInterruptions": true,
               "prompt": "${TextInput_Prompt_gdUWzS()}",
               "unrecognizedPrompt": "",
               "invalidPrompt": "",
-              "defaultValueResponse": "",
               "property": "dialog.question"
+            },
+            {
+              "$kind": "Microsoft.HttpRequest",
+              "$designer": {
+                "id": "YlqZI3"
+              },
+              "resultProperty": "turn.results",
+              "url": "https://prod-23.uksouth.logic.azure.com:443/workflows/0e7d6dcbc28d4db18b22e96ad6d5141b/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=_JTIq4iAE4jLy1ejKL7vfYpuIjicEYbAAUkvh58VQGI",
+              "method": "POST",
+              "contentType": "application/json",
+              "body": {
+                "action": "Website Question",
+                "name": "=dialog.name",
+                "email": "=dialog.email",
+                "phone": "=dialog.phone",
+                "question": "=dialog.question"
+              }
             },
             {
               "$kind": "Microsoft.SendActivity",
@@ -264,14 +283,15 @@
           "disabled": false,
           "maxTurnCount": 3,
           "alwaysPrompt": false,
-          "allowInterruptions": false,
+          "allowInterruptions": true,
           "prompt": "${ConfirmInput_Prompt_ocNl6R()}",
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
-          "defaultValueResponse": "",
           "choiceOptions": {
             "includeNumbers": true,
-            "inlineOrMore": ", or "
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
           },
           "property": "dialog.more"
         },

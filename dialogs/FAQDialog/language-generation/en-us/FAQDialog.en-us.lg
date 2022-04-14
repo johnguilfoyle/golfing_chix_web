@@ -183,7 +183,7 @@
                     "actions": [
                         {
                             "type": "Action.ToggleVisibility",
-                            "title": "What risks ar involved buying online?",
+                            "title": "What risks are involved buying online?",
                             "targetElements": [
                                 "8"
                             ]
@@ -456,3 +456,17 @@
 
 # SendActivity_RJcaWH_text()
 - Thanks, I have sent your question to our expert who will get back to you with an answer in the next 24 hours.
+# TextInput_InvalidPrompt_ep3nfK()
+[Activity
+    Text = ${TextInput_InvalidPrompt_ep3nfK_text()}
+]
+
+# TextInput_InvalidPrompt_ep3nfK_text()
+- This doesn't appear to be a valid phone number. Please re-try.
+# TextInput_InvalidPrompt_BV5XVR()
+[Activity
+    Text = ${TextInput_InvalidPrompt_BV5XVR_text()}
+]
+
+# TextInput_InvalidPrompt_BV5XVR_text()
+- This doesn't appear to be a valid email. Please re-try. 

@@ -17,6 +17,16 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.TelemetryTrackEventAction",
+          "$designer": {
+            "id": "Bu7yzh"
+          },
+          "eventName": "Goal",
+          "properties": {
+            "GoalId": "2"
+          }
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "DqEw6w"
@@ -190,6 +200,17 @@
                 "email": "=dialog.Email",
                 "phone": "=dialog.phone",
                 "firstname": "=user.firstname"
+              }
+            },
+            {
+              "$kind": "Microsoft.TelemetryTrackEventAction",
+              "$designer": {
+                "id": "F26xTt"
+              },
+              "eventName": "Goal",
+              "properties": {
+                "GoalId": "2",
+                "GoalCompleted": "1"
               }
             },
             {

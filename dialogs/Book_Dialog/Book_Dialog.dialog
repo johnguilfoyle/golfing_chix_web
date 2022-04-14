@@ -274,13 +274,13 @@
           "disabled": false,
           "maxTurnCount": 3,
           "alwaysPrompt": false,
-          "allowInterruptions": false,
+          "allowInterruptions": true,
           "unrecognizedPrompt": "",
-          "invalidPrompt": "",
           "defaultValueResponse": "",
           "prompt": "${ConfirmInput_Prompt_A4LGiE()}",
           "choiceOptions": {
-            "includeNumbers": true
+            "includeNumbers": true,
+            "inlineOrMore": ", or "
           },
           "property": "dialog.confirm",
           "confirmChoices": [

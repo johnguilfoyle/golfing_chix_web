@@ -6,7 +6,7 @@
 ]
 
 # SendActivity_1JzvCs_text()
-- Why not have a look at our great spring collection, new in. 
+- Why not have a look at our great collection, new in.
 # SendActivity_0iFAHn()
 [Activity
     Attachments = ${json(SendActivity_0iFAHn_attachment_DVDC5m())}
@@ -54,19 +54,19 @@
 
 # SendActivity_okmzEr_attachment_1xm1m6()
 [VideoCard
-    title = Mira SS Polo Try On
-    subtitle = watch our latest try on video
-    text = Get a better look at how this new golfing dress looks on.
-    image = https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/Tryon1.png
-    media = https://youtu.be/37GoyghC0XM
-]
-# SendActivity_okmzEr_attachment_yb05t7()
-[VideoCard
     title = Outfit Planning Try On
     subtitle = watch our latest outfit planning video
     text = Get a better look at how this new golfing dress looks on.
     image = https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/Tryon2.png
     media = https://youtu.be/y6hL3HAsnfE
+]
+# SendActivity_okmzEr_attachment_yb05t7()
+[VideoCard
+    title = Mira SS Polo Try On
+    subtitle = watch our latest try on video
+    text = Get a better look at how this new golfing dress looks on.
+    image = https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/Tryon1.png
+    media = https://youtu.be/37GoyghC0XM
 ]
 # ConfirmInput_Prompt_sUEm7J()
 [Activity
