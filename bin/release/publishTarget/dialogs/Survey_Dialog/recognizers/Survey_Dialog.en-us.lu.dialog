@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_Survey_Dialog",
+  "applicationId": "=settings.luis.Survey_Dialog_en_us_lu.appId",
+  "version": "=settings.luis.Survey_Dialog_en_us_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}

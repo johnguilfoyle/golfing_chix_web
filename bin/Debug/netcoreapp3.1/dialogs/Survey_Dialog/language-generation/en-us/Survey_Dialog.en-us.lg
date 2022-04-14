@@ -1,0 +1,127 @@
+[import](common.lg)
+
+# SendActivity_9D9lB7()
+[Activity
+    Text = ${SendActivity_9D9lB7_text()}
+]
+
+# SendActivity_9D9lB7_text()
+- We are giving you the chance to win a £100 shopping voucher, if you complete our short survey...
+# SendActivity_maL6Ue()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# ConfirmInput_Prompt_ZAbsfG()
+[Activity
+    Text = ${ConfirmInput_Prompt_ZAbsfG_text()}
+]
+
+# ConfirmInput_Prompt_ZAbsfG_text()
+- Would you like to win £100?
+# SendActivity_exKM54()
+[Activity
+    Text = ${SendActivity_exKM54_text()}
+]
+
+# SendActivity_exKM54_text()
+- Great, please answer the following questions..
+# SendActivity_juCSRB()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# ConfirmInput_Prompt_3Q7TYg()
+[Activity
+    Attachments = ${json(ConfirmInput_Prompt_3Q7TYg_attachment_gSYt3D())}
+]
+
+# ConfirmInput_Prompt_3Q7TYg_attachment_gSYt3D()
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Whats your favourite brand on the Golfing Chix website? (you can tick more than one)",
+            "wrap": true,
+            "style": "heading",
+            "size": "Medium"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "myChoice",
+            "isMultiSelect": true,
+            "choices": [
+                {
+                    "title": "Green Lamb",
+                    "value": "Green Lamb"
+                },
+                {
+                    "title": "Duca del Cosma",
+                    "value": "Duca del Cosma"
+                },
+                {
+                    "title": "Tail Golf",
+                    "value": "Tail Golf"
+                },
+                {
+                    "title": "Surprise Shop",
+                    "value": "Surprise Shop"
+                }
+            ]
+        }
+    ]
+}```
+# ConfirmInput_Prompt_fiHCo4()
+[Activity
+    Attachments = ${json(ConfirmInput_Prompt_fiHCo4_attachment_D5QQQp())}
+]
+
+# ConfirmInput_Prompt_fiHCo4_attachment_D5QQQp()
+- ```{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "How did you hear about the Golfing Chix website? (you can tick more than one)",
+            "wrap": true,
+            "style": "heading",
+            "size": "Medium"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "myChoice",
+            "isMultiSelect": true,
+            "choices": [
+                {
+                    "title": "Business Card",
+                    "value": "Business Card"
+                },
+                {
+                    "title": "Facebook",
+                    "value": "Facebook"
+                },
+                {
+                    "title": "Fashion Show attendance",
+                    "value": "Fashion Show attendance"
+                },
+                {
+                    "title": "Golf Event",
+                    "value": "Golf Event"
+                },
+                {
+                    "title": "Other",
+                    "value": "Other"
+                }
+            ]
+        }
+    ]
+}```

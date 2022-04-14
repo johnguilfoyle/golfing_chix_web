@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_Offers_Dialog",
+  "recognizers": {
+    "en-us": "Offers_Dialog.en-us.lu",
+    "": "Offers_Dialog.en-us.lu"
+  }
+}

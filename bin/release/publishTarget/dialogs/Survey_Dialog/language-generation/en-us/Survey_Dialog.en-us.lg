@@ -1,0 +1,255 @@
+[import](common.lg)
+
+# SendActivity_9D9lB7()
+[Activity
+    Text = ${SendActivity_9D9lB7_text()}
+]
+
+# SendActivity_9D9lB7_text()
+- We are giving you the chance to win a £100 shopping voucher, if you complete our short survey...
+# SendActivity_maL6Ue()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# ConfirmInput_Prompt_ZAbsfG()
+[Activity
+    Text = ${ConfirmInput_Prompt_ZAbsfG_text()}
+]
+
+# ConfirmInput_Prompt_ZAbsfG_text()
+- Would you like to win a £100?
+# SendActivity_exKM54()
+[Activity
+    Text = ${SendActivity_exKM54_text()}
+]
+
+# SendActivity_exKM54_text()
+- Please answer the following questions..
+# SendActivity_juCSRB()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# SendActivity_wI9cQY()
+[Activity
+    Text = ${SendActivity_wI9cQY_text()}
+]
+
+# SendActivity_wI9cQY_text()
+- Thanks
+# ConfirmInput_Prompt_UTXQrz()
+[Activity
+    Text = ${ConfirmInput_Prompt_UTXQrz_text()}
+]
+
+# ConfirmInput_Prompt_UTXQrz_text()
+- Is there anything else I can help you with today?
+# SendActivity_zm8NkH()
+[Activity
+    Text = ${SendActivity_zm8NkH_text()}
+]
+
+# SendActivity_zm8NkH_text()
+- No problem, thanks for your time. Have a nice day.
+# SendActivity_uwjqmE()
+[Activity
+    Text = ${SendActivity_uwjqmE_text()}
+]
+
+# SendActivity_uwjqmE_text()
+- Great, let me show you some options...
+# ChoiceInput_Prompt_lZYLcq()
+[Activity
+    Text = ${ChoiceInput_Prompt_lZYLcq_text()}
+]
+
+# ChoiceInput_Prompt_lZYLcq_text()
+- Does your pro shop stock LADIES clothing items?
+# TextInput_Prompt_LFTqLS()
+[Activity
+    Text = ${TextInput_Prompt_LFTqLS_text()}
+]
+
+# TextInput_Prompt_LFTqLS_text()
+- Can you share the name of your golf club for research purposes?
+# SendActivity_DCg98t()
+[Activity
+    Text = ${SendActivity_DCg98t_text()}
+]
+
+# SendActivity_DCg98t_text()
+- Finally, let me just take some quick info about you to enter you into the prize draw...
+# TextInput_Prompt_BS0aEy()
+[Activity
+    Text = ${TextInput_Prompt_BS0aEy_text()}
+]
+
+# TextInput_Prompt_BS0aEy_text()
+- What's your name?
+# TextInput_Prompt_5Kn6YS()
+[Activity
+    Text = ${TextInput_Prompt_5Kn6YS_text()}
+]
+
+# TextInput_Prompt_5Kn6YS_text()
+- and your email?
+# TextInput_Prompt_Af0Pza()
+[Activity
+    Text = ${TextInput_Prompt_Af0Pza_text()}
+]
+
+# TextInput_Prompt_Af0Pza_text()
+- and finally your phone number?
+# TextInput_Prompt_jv1ufZ()
+[Activity
+    Attachments = ${json(TextInput_Prompt_jv1ufZ_attachment_aYWwuh())}
+]
+
+# TextInput_Prompt_jv1ufZ_attachment_aYWwuh()
+- ```{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Whats your favourite brand on the Golfing Chix website? (you can tick more than one)",
+            "wrap": true,
+            "style": "heading",
+            "size": "Medium"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "myChoice",
+            "isMultiSelect": true,
+            "choices": [
+                {
+                    "title": "Green Lamb",
+                    "value": "Green Lamb"
+                },
+                {
+                    "title": "Duca del Cosma",
+                    "value": "Duca del Cosma"
+                },
+                {
+                    "title": "Tail Golf",
+                    "value": "Tail Golf"
+                },
+                {
+                    "title": "Surprise Shop",
+                    "value": "Surprise Shop"
+                },
+                {
+                    "title": "Daily Sports",
+                    "value": "Daily Sports"
+                },
+                {
+                    "title": "Pure Golf",
+                    "value": "Pure Golf"
+                },
+                {
+                    "title": "Other",
+                    "value": "Other"
+                }
+            ]
+        },
+          {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Submit",
+                    "style": "positive"
+                }
+            ]
+        }
+    ]
+}```
+# TextInput_Prompt_O0fEh0()
+[Activity
+    Attachments = ${json(TextInput_Prompt_O0fEh0_attachment_jPlfJX())}
+]
+
+# TextInput_Prompt_O0fEh0_attachment_jPlfJX()
+- ```{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "How did you hear about the Golfing Chix website? (you can tick more than one)",
+            "wrap": true,
+            "style": "heading",
+            "size": "Medium"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "myChoice2",
+            "isMultiSelect": true,
+            "choices": [
+                {
+                    "title": "Business Card",
+                    "value": "Business Card"
+                },
+                {
+                    "title": "Facebook",
+                    "value": "Facebook"
+                },
+                {
+                    "title": "Fashion Show attendance",
+                    "value": "Fashion Show attendance"
+                },
+                {
+                    "title": "Golf Event",
+                    "value": "Golf Event"
+                },
+                {
+                    "title": "Other",
+                    "value": "Other"
+                }
+            ]
+        },
+          {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Submit",
+                    "style": "positive"
+                }
+            ]
+        }
+    ]
+}```
+# SendActivity_BjOsCq()
+[Activity
+    Text = ${SendActivity_BjOsCq_text()}
+]
+
+# SendActivity_BjOsCq_text()
+- Great, to view our terms and conditions please click here  [Terms](https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/GolfingChixComp.pdf)
+# SendActivity_c9jqDw()
+[Activity
+    Text = ${SendActivity_c9jqDw_text()}
+]
+
+# SendActivity_c9jqDw_text()
+- The winner will be selected on 1st June 2022 and will be notified via email.
+# TextInput_InvalidPrompt_5Kn6YS()
+[Activity
+    Text = ${TextInput_InvalidPrompt_5Kn6YS_text()}
+]
+
+# TextInput_InvalidPrompt_5Kn6YS_text()
+- Sorry that doesn't appear to be a valid email. Please re-try.
+# TextInput_InvalidPrompt_Af0Pza()
+[Activity
+    Text = ${TextInput_InvalidPrompt_Af0Pza_text()}
+]
+
+# TextInput_InvalidPrompt_Af0Pza_text()
+- Sorry that doesn't appear to be a valid phone number. Please re-try.

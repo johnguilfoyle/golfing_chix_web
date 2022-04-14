@@ -1,0 +1,185 @@
+[import](common.lg)
+
+# SendActivity_OveBVj()
+[Activity
+    Text = ${SendActivity_OveBVj_text()}
+]
+
+# SendActivity_OveBVj_text()
+- Thanks, Please select your rating for each one by clicking on the appropriate smiley face...
+# SendActivity_txpW58()
+[Activity
+    Text = ${SendActivity_txpW58_text()}
+]
+
+# SendActivity_txpW58_text()
+- Thanks for leaving feedback.
+# ConfirmInput_Prompt_yfL8Gg()
+[Activity
+    Text = ${ConfirmInput_Prompt_yfL8Gg_text()}
+]
+
+# ConfirmInput_Prompt_yfL8Gg_text()
+- Is there anything else I can help you with?
+# SendActivity_Le96aH()
+[Activity
+    Text = ${SendActivity_Le96aH_text()}
+]
+
+# SendActivity_Le96aH_text()
+- No problem, thanks for speaking to me today,
+# SendActivity_Ee89ih()
+[Activity
+    Text = ${SendActivity_Ee89ih_text()}
+]
+
+# SendActivity_Ee89ih_text()
+- Great, let me show you some options..
+# SendActivity_rPdvlQ()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# SendActivity_CNwzCb()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# SendActivity_QBzpkI()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# TextInput_Prompt_RFkA50()
+[Activity
+    Attachments = ${json(TextInput_Prompt_RFkA50_attachment_l6kvis())}
+]
+
+# TextInput_Prompt_RFkA50_attachment_l6kvis()
+- ```{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "color": "Accent",
+            "text": "Rate your experience!"
+        },
+        {
+            "type": "TextBlock",
+            "separator": true,
+            "wrap": true,
+            "text": "Please let us know how you rate your overall experience with Golfing Chix?"
+        },
+        {
+            "type": "ColumnSet",
+            "spacing": "Medium",
+            "columns": [
+                {
+                    "type": "Column",
+                    "selectAction": {
+                        "type": "Action.Submit",
+                        "data": "terrific"
+                    },
+                    "items": [
+                        {
+                            "type": "Image",
+                            "horizontalAlignment": "Center",
+                            "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/feedback1.png"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "horizontalAlignment": "Center",
+                            "text": "Terrific",
+                            "wrap": true
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "selectAction": {
+                        "type": "Action.Submit",
+                        "data": "good"
+                    },
+                    "items": [
+                        {
+                            "type": "Image",
+                            "horizontalAlignment": "Center",
+                            "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/feedback2.png"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "horizontalAlignment": "Center",
+                            "text": "Good",
+                            "wrap": true
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "selectAction": {
+                        "type": "Action.Submit",
+                        "data": "ok"
+                    },
+                    "items": [
+                        {
+                            "type": "Image",
+                            "horizontalAlignment": "Center",
+                            "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/feedback3.png"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "horizontalAlignment": "Center",
+                            "text": "OK",
+                            "wrap": true
+                        }
+                    ],
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "selectAction": {
+                        "type": "Action.Submit",
+                        "data": "bad"
+                    },
+                    "items": [
+                        {
+                            "type": "Image",
+                            "horizontalAlignment": "Center",
+                            "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/feedback4.png"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "horizontalAlignment": "Center",
+                            "text": "Bad",
+                            "wrap": true
+                        }
+                    ],
+                    "width": "stretch"
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3"
+}```
+# TextInput_Prompt_vrQXjS()
+[Activity
+    Text = ${TextInput_Prompt_vrQXjS_text()}
+]
+
+# TextInput_Prompt_vrQXjS_text()
+- Sorry you feel you had a bad experience. Please could you enter the reason for this so that we can do better...
+# SendActivity_V7Me2m()
+[Activity
+    Text = ${SendActivity_V7Me2m_text()}
+]
+
+# SendActivity_V7Me2m_text()
+- Thanks...we really value your feedback to help us improve our service.

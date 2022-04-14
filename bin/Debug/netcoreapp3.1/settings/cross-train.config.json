@@ -1,0 +1,46 @@
+{
+  "Book_Dialog.en-us": {
+    "rootDialog": false,
+    "triggers": {
+      "": [
+        "WelcomeDialog.en-us"
+      ]
+    }
+  },
+  "Offers_Dialog.en-us": {
+    "rootDialog": false,
+    "triggers": {
+      "": [
+        "WelcomeDialog.en-us",
+        "WelcomeDialog.en-us"
+      ]
+    }
+  },
+  "golfing_chix_web.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "": [
+        "WelcomeDialog.en-us"
+      ],
+      "Cancel": [
+        "CancelDialog.en-us"
+      ],
+      "Help": [
+        "HelpDialog.en-us"
+      ],
+      "BookConsultationIntent": [
+        "Book_Dialog.en-us"
+      ],
+      "OffersIntent": [
+        "Offers_Dialog.en-us"
+      ],
+      "DiscountIntent": "",
+      "ReviewsIntent": "",
+      "SurveyIntent": [
+        "Survey_Dialog.en-us"
+      ],
+      "FAQs": "",
+      "SpringIntent": ""
+    }
+  }
+}

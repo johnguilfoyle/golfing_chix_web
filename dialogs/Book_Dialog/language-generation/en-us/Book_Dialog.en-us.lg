@@ -1,0 +1,287 @@
+[import](common.lg)
+
+# SendActivity_dPa8b8()
+[Activity
+    Text = ${SendActivity_dPa8b8_text()}
+]
+
+# SendActivity_dPa8b8_text()
+- Thanks for your interest in booking an event. Let's take some details from you...
+# SendActivity_pEu0Ys()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# SendActivity_sbmGnM()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# TextInput_Prompt_n2mTBr()
+[Activity
+    Text = ${TextInput_Prompt_n2mTBr_text()}
+]
+
+# TextInput_Prompt_n2mTBr_text()
+- Please can you tell me your name?
+# TextInput_Prompt_7YiuuT()
+[Activity
+    Text = ${TextInput_Prompt_7YiuuT_text()}
+]
+
+# TextInput_Prompt_7YiuuT_text()
+- and whats the best phone number to get you on?
+# TextInput_Prompt_VWvV5F()
+[Activity
+    Text = ${TextInput_Prompt_VWvV5F_text()}
+]
+
+# TextInput_Prompt_VWvV5F_text()
+- Let me know your email so I can contact you regarding the event...
+# TextInput_Prompt_6NAyor()
+[Activity
+    Text = ${TextInput_Prompt_6NAyor_text()}
+]
+
+# TextInput_Prompt_6NAyor_text()
+- Which location would you like the event at?
+# TextInput_Prompt_0Hm5MN()
+[Activity
+    Text = ${TextInput_Prompt_0Hm5MN_text()}
+]
+
+# TextInput_Prompt_0Hm5MN_text()
+- What date would you like the event?
+# ConfirmInput_Prompt_A4LGiE()
+[Activity
+    Text = ${ConfirmInput_Prompt_A4LGiE_text()}
+]
+
+# ConfirmInput_Prompt_A4LGiE_text()
+- Is there anything else I can help you with today?
+# SendActivity_2n49AH()
+[Activity
+    Text = ${SendActivity_2n49AH_text()}
+]
+
+# SendActivity_2n49AH_text()
+- Thanks, have a great day
+# SendActivity_WtdI7m()
+[Activity
+    Text = ${SendActivity_WtdI7m_text()}
+]
+
+# SendActivity_WtdI7m_text()
+- Ok great, here's some options for you...
+# SendActivity_UuUjZ1()
+[Activity
+    Attachments = ${json(SendActivity_UuUjZ1_attachment_QhR4zV())}
+]
+
+# SendActivity_UuUjZ1_attachment_QhR4zV()
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "Media",
+            "poster": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/FashionShow.png",
+            "sources": [
+                {
+                    "mimeType": "video/mp4",
+                    "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/Golfing%20Chix%20Fashion%20Show.MP4"
+                }
+            ]
+        }
+    ]
+}```
+# SendActivity_bv2bDN()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# ConfirmInput_Prompt_fLLr2O()
+[Activity
+    Attachments = ${json(ConfirmInput_Prompt_fLLr2O_attachment_Tsail7())}
+]
+
+# ConfirmInput_Prompt_fLLr2O_attachment_Tsail7()
+- ```{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 2,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Event Booking",
+                            "size": "Large",
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "That's great, just to confirm are you happy with the details you've supplied?",
+                            "wrap": true
+                        },
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Name: ${dialog.name}\n\n",
+                                            "spacing": "None",
+                                            "wrap": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Email: ${dialog.email}\n",
+                                            "wrap": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "wrap": true,
+                                            "text": "Phone: ${dialog.phone}"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Type: ${dialog.eventType}",
+                                            "wrap": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Date: ${dialog.time}\n",
+                                            "wrap": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Location: ${dialog.day}\n",
+                                            "wrap": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}```
+# SendActivity_VDLihu()
+[Activity
+    Text = ${SendActivity_VDLihu_text()}
+]
+
+# SendActivity_VDLihu_text()
+- Thanks. I've got that information. I will come back to you within the next 24 hours to arrange the event and get some more details. 
+# SendActivity_MOBXkg()
+[Activity
+    Text = ${SendActivity_MOBXkg_text()}
+]
+
+# SendActivity_MOBXkg_text()
+- Ok..no problem, lets try again -
+# TextInput_InvalidPrompt_7YiuuT()
+[Activity
+    Text = ${TextInput_InvalidPrompt_7YiuuT_text()}
+]
+
+# TextInput_InvalidPrompt_7YiuuT_text()
+- This doesn't appear to be a valid phone number. Please re-enter.
+# TextInput_InvalidPrompt_VWvV5F()
+[Activity
+    Text = ${TextInput_InvalidPrompt_VWvV5F_text()}
+]
+
+# TextInput_InvalidPrompt_VWvV5F_text()
+- This doesn't appear to be a valid email address. Please re-enter.
+# ChoiceInput_Prompt_Fj3HTL()
+[Activity
+    Text = ${ChoiceInput_Prompt_Fj3HTL_text()}
+]
+
+# ChoiceInput_Prompt_Fj3HTL_text()
+- What type of event are you interested in?
+# SendActivity_PxZxmp()
+[Activity
+    Text = ${SendActivity_PxZxmp_text()}
+]
+
+# SendActivity_PxZxmp_text()
+- Why not have a peak at one of our previous Fashion show events below...
+# SendActivity_cIV3qL()
+[Activity
+    Text = ${SendActivity_cIV3qL_text()}
+]
+
+# SendActivity_cIV3qL_text()
+- To view our Privacy Policy - Click here - https://www.golfingchix.co.uk/privacy.asp

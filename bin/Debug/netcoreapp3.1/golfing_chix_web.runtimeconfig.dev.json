@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\pbi-admin\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\pbi-admin\\.nuget\\packages"
+    ]
+  }
+}

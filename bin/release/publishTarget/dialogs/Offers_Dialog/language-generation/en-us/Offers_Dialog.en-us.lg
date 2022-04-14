@@ -1,0 +1,199 @@
+[import](common.lg)
+
+# SendActivity_DqEw6w()
+[Activity
+    Text = ${SendActivity_DqEw6w_text()}
+]
+
+# SendActivity_DqEw6w_text()
+- Great, let me show you our refer a friend offer...
+# SendActivity_KW1CT1()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# SendActivity_3YwxRs()
+[Activity
+    Text = ${SendActivity_3YwxRs_text()}
+]
+
+# SendActivity_3YwxRs_text()
+- We have a special offer of 15% off your next order if you introduce a freind to us :)
+# SendActivity_NGO575()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# ConfirmInput_Prompt_ou24rf()
+[Activity
+    Text = ${ConfirmInput_Prompt_ou24rf_text()}
+]
+
+# ConfirmInput_Prompt_ou24rf_text()
+- Would you like to receive 15% off?
+# SendActivity_3JIYPQ()
+[Activity
+    Text = ${SendActivity_3JIYPQ_text()}
+]
+
+# SendActivity_3JIYPQ_text()
+- Simply provide your mobile number and email and we will send you a message with a code for you both to use. Just forward on the code to your friend.
+# SendActivity_Z5fUOA()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# SendActivity_GLlA7y()
+[Activity
+    Text = ${SendActivity_GLlA7y_text()}
+]
+
+# SendActivity_GLlA7y_text()
+- No problem, let me take you back to some other options
+# TextInput_Prompt_OValGY()
+[Activity
+    Text = ${TextInput_Prompt_OValGY_text()}
+]
+
+# TextInput_Prompt_OValGY_text()
+- Great. What is your  name?
+# TextInput_Prompt_qzsgnR()
+[Activity
+    Text = ${TextInput_Prompt_qzsgnR_text()}
+]
+
+# TextInput_Prompt_qzsgnR_text()
+- And what is your email address?
+# SendActivity_LEaAdW()
+[Activity
+    Text = ${SendActivity_LEaAdW_text()}
+]
+
+# SendActivity_LEaAdW_text()
+- Thanks, you will receive a message with a 15% discount code.
+# SendActivity_6oSGai()
+[Activity
+    Attachments = ${json(SendActivity_6oSGai_attachment_Vybwhx())}
+]
+
+# SendActivity_6oSGai_attachment_Vybwhx()
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "Image",
+            "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/Special%20offer.png",
+            "horizontalAlignment": "Center"
+        }
+    ]
+}```
+# SendActivity_eQ79Ko()
+[Activity
+    Text = ${SendActivity_eQ79Ko_text()}
+]
+
+# SendActivity_eQ79Ko_text()
+- Let me show you some more options of how I can further help you
+# SendActivity_0qI1TD()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# SendActivity_QHfJGR()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# TextInput_Prompt_MgRVKc()
+[Activity
+    Attachments = ${json(TextInput_Prompt_MgRVKc_attachment_725wrx())}
+]
+
+# TextInput_InvalidPrompt_qzsgnR()
+[Activity
+    Text = ${TextInput_InvalidPrompt_qzsgnR_text()}
+]
+
+# TextInput_InvalidPrompt_qzsgnR_text()
+- This doesn't appear to be a valid email. Please re-try. 
+# TextInput_Prompt_MgRVKc_attachment_725wrx()
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "TextBlock",
+            "wrap": true,
+            "text": "Please enter your phone number by selecting country code and then enter mobile"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Input.ChoiceSet",
+                            "choices": [
+                                {
+                                    "title": "UK +44",
+                                    "value": "+44"
+                                },
+                                {
+                                    "title": "Ireland + 353",
+                                    "value": "+353"
+                                }
+                            ],
+                            "placeholder": "Country Code:",
+                            "value": "+44",
+                            "id": "country",
+                            "spacing": "None",
+                            "style": "expanded"
+                        },
+                        {
+                            "type": "ActionSet",
+                            "horizontalAlignment": "Center",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "OK"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Input.Number",
+                            "placeholder": "79505555",
+                            "id": "mobile",
+                            "spacing": "ExtraLarge",
+                            "isRequired": true,
+                            "errorMessage": "You must enter a mobile phone number",
+                            "label": "Mobile No."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}```
+# SendActivity_sJynH5()
+[Activity
+    Text = ${SendActivity_sJynH5_text()}
+]
+
+# SendActivity_sJynH5_text()
+- To view our Privacy Policy - Click here - https://www.golfingchix.co.uk/privacy.asp

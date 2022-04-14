@@ -1,0 +1,57 @@
+# Cancel
+- cancel
+- quit
+- abort
+- exit
+- never mind
+- forget about it
+- just stop already
+- end this now
+
+# Help
+- help
+- im stuck
+- how do you work
+- what can you do
+- what can you help me with
+- i need help
+- i need some assistance
+
+# None
+- where is my car?
+- I want to order a pizza
+- place an item on hold
+- Is it going to rain?
+- turn on the lights
+- check my account balance
+- do unicorns really exist
+- duck
+
+# BookConsultationIntent
+-Book an Event
+
+# OffersIntent
+-Refer a Friend - 15% Off
+
+# DiscountIntent
+-DiscountCodes
+
+# ReviewsIntent
+-Leave Feedback
+
+# SurveyIntent
+-Win a £100 Prize
+
+# FAQs
+-FAQ
+-FAQs
+-I have a question
+-help
+-help me
+-Ask a question
+-I want to know about postage
+-I want to know about sizes
+-what are the sizes like
+-do you have a size guide
+# SpringIntent
+-New Collection

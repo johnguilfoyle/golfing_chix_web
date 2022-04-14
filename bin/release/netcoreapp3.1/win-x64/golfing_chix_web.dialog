@@ -1,0 +1,313 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "name": "golfing_chix_web",
+    "description": "",
+    "id": "4pM5gc"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnConversationUpdateActivity",
+      "$designer": {
+        "id": "376720",
+        "comment": "This trigger runs when a conversation update activity is sent to the bot. This indicates a user or bot being added or removed from a conversation."
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "518944",
+            "name": "Loop: for each item",
+            "comment": "For each member added to the conversation."
+          },
+          "itemsProperty": "turn.Activity.membersAdded",
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "641773",
+                "name": "Branch: if/else",
+                "comment": "Checks that that member added ID does not match the bot ID. This prevents the greeting message from being sent when the bot is added to a conversation."
+              },
+              "condition": "=string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
+              "actions": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "e1i6lY",
+        "name": "Cancel",
+        "comment": "Triggered when the Cancel intent is recognized in the user's utterance."
+      },
+      "intent": "Cancel",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "FDsuIq",
+            "comment": "Launches the CancelDialog."
+          },
+          "activityProcessed": true,
+          "dialog": "CancelDialog"
+        }
+      ],
+      "condition": "=turn.recognized.score > 0.9"
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "9wETGs",
+        "name": "Help",
+        "comment": "Triggered when the Help intent is recognized in the user's utterance."
+      },
+      "intent": "Help",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "B0NP8m",
+            "comment": "Launches the HelpDialog."
+          },
+          "activityProcessed": true,
+          "dialog": "HelpDialog"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnError",
+      "$designer": {
+        "id": "aLQGr7",
+        "comment": "Triggered when an error event is thrown by the dialog stack. "
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TelemetryTrackEventAction",
+          "$designer": {
+            "id": "Aucn7t",
+            "comment": "Logs the error received in the Telelmetry Client (typically Application Insights for production instances)."
+          },
+          "eventName": "ErrorOccurred",
+          "properties": {
+            "Type": "=turn.dialogEvent.value.className",
+            "Exception": "=turn.dialogEvent.value"
+          }
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "2outgQ",
+            "comment": "Shows error message to user."
+          },
+          "activity": "${SendActivity_ErrorOccured()}"
+        },
+        {
+          "$kind": "Microsoft.TraceActivity",
+          "$designer": {
+            "id": "NVFqr5",
+            "comment": "Emits a trace activity with the error value that is visible in local testing channels such as the Bot Framework Composer Web Chat window and the Bot Framework Emulator."
+          },
+          "name": "=turn.dialogEvent.value.className",
+          "valueType": "Exception",
+          "value": "=turn.dialogEvent.value",
+          "label": "ErrorOccurred"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnUnknownIntent",
+      "$designer": {
+        "id": "FOxcnx",
+        "comment": "This trigger fires when an incoming activity is not handled by any other trigger."
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "Glt6Pm"
+          },
+          "activityProcessed": true,
+          "dialog": "FAQDialog"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "LmsgNB",
+        "name": "BookConsultationIntent"
+      },
+      "intent": "BookConsultationIntent",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "FegD7D"
+          },
+          "activityProcessed": true,
+          "dialog": "Book_Dialog"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "9B0YaX",
+        "name": "OffersIntent"
+      },
+      "intent": "OffersIntent",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "ImrwN7"
+          },
+          "activityProcessed": true,
+          "dialog": "Offers_Dialog"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "M65mCZ",
+        "name": "DiscountIntent"
+      },
+      "intent": "DiscountIntent"
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "VwVvUU",
+        "name": "ReviewsIntent"
+      },
+      "intent": "ReviewsIntent",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "miF3le"
+          },
+          "activityProcessed": true,
+          "dialog": "Reviews_Dialog"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "Yhop6F",
+        "name": "SurveyIntent"
+      },
+      "intent": "SurveyIntent",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "s0tuiX"
+          },
+          "activityProcessed": true,
+          "dialog": "Survey_Dialog"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "UqxHXX",
+        "name": "FAQs"
+      },
+      "intent": "FAQs",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "ICji9c"
+          },
+          "activityProcessed": true,
+          "dialog": "FAQDialog"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "6RNvCN",
+        "name": "SpringIntent"
+      },
+      "intent": "SpringIntent",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "itvpfI"
+          },
+          "activityProcessed": true,
+          "dialog": "SpringDialog"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnEventActivity",
+      "$designer": {
+        "id": "gMi9tJ",
+        "name": "Event received (Event activity)"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TelemetryTrackEventAction",
+          "$designer": {
+            "id": "6AL3kV"
+          },
+          "eventName": "EventReceived",
+          "properties": {
+            "EventType": "=turn.activity.name",
+            "Domain": "=turn.activity.value.domain",
+            "URL": "=turn.activity.value.url",
+            "Title": "=turn.activity.value.title",
+            "UserUuid": "=turn.activity.value.uuid",
+            "ConversationStatus": "=turn.activity.value.conversation_status",
+            "ContainerState": "=turn.activity.value.container_state",
+            "TimezoneOffset": "=turn.activity.value.timezone_offset",
+            "DialogTrigger": "=turn.activity.value.dialog_trigger",
+            "IntentTrigger": "=turn.activity.value.intent_trigger",
+            "LinkURL": "=turn.activity.value.link_url",
+            "LinkTitle": "=turn.activity.value.link_title"
+          }
+        },
+        {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "LsvJYE"
+          },
+          "assignments": [
+            {
+              "property": "user.uuid",
+              "value": "=turn.activity.value.uuid"
+            },
+            {
+              "property": "conversation.status",
+              "value": "=turn.activity.value.conversation_status"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "CibiXo"
+          },
+          "activityProcessed": true,
+          "dialog": "WelcomeDialog"
+        }
+      ]
+    }
+  ],
+  "generator": "golfing_chix_web.lg",
+  "id": "golfing_chix_web",
+  "recognizer": "golfing_chix_web.lu.qna"
+}

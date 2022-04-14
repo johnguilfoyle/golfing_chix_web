@@ -1,0 +1,101 @@
+[import](common.lg)
+
+# SendActivity_DqEw6w()
+[Activity
+    Text = ${SendActivity_DqEw6w_text()}
+]
+
+# SendActivity_DqEw6w_text()
+- Great, let me show you some of our latest offers...
+# SendActivity_KW1CT1()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# SendActivity_3YwxRs()
+[Activity
+    Text = ${SendActivity_3YwxRs_text()}
+]
+
+# SendActivity_3YwxRs_text()
+- We have a special offer of 15% off your next order if you introduce a freind to us :)
+# SendActivity_NGO575()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# ConfirmInput_Prompt_ou24rf()
+[Activity
+    Text = ${ConfirmInput_Prompt_ou24rf_text()}
+]
+
+# ConfirmInput_Prompt_ou24rf_text()
+- Would you like to receive 15% off?
+# SendActivity_3JIYPQ()
+[Activity
+    Text = ${SendActivity_3JIYPQ_text()}
+]
+
+# SendActivity_3JIYPQ_text()
+- Simply provide their name and email and we will send them an email with a code for you both to use.
+# SendActivity_Z5fUOA()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# SendActivity_GLlA7y()
+[Activity
+    Text = ${SendActivity_GLlA7y_text()}
+]
+
+# SendActivity_GLlA7y_text()
+- No problem, let me take you back to some other options
+# TextInput_Prompt_OValGY()
+[Activity
+    Text = ${TextInput_Prompt_OValGY_text()}
+]
+
+# TextInput_Prompt_OValGY_text()
+- Great. What is your friends name?
+# TextInput_Prompt_qzsgnR()
+[Activity
+    Text = ${TextInput_Prompt_qzsgnR_text()}
+]
+
+# TextInput_Prompt_qzsgnR_text()
+- And what is thier email address?
+# SendActivity_LEaAdW()
+[Activity
+    Text = ${SendActivity_LEaAdW_text()}
+]
+
+# SendActivity_LEaAdW_text()
+- Thanks, you will receive an email once ${dialog.Name} has confirmed, with a 15% discount code.
+# SendActivity_6oSGai()
+[Activity
+    Attachments = ${json(SendActivity_6oSGai_attachment_Vybwhx())}
+]
+
+# SendActivity_6oSGai_attachment_Vybwhx()
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "Image",
+            "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/save15.png",
+            "size": "Large"
+        }
+    ]
+}```
+# SendActivity_eQ79Ko()
+[Activity
+    Text = ${SendActivity_eQ79Ko_text()}
+]
+
+# SendActivity_eQ79Ko_text()
+- Let me show you some more options of how I can further help you

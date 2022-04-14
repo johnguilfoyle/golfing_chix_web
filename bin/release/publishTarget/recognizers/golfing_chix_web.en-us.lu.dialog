@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_golfing_chix_web",
+  "applicationId": "=settings.luis.golfing_chix_web_en_us_lu.appId",
+  "version": "=settings.luis.golfing_chix_web_en_us_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}

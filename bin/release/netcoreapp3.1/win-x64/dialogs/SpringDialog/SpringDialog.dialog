@@ -1,0 +1,122 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "Zhci6o",
+    "name": "SpringDialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "uP8JCA"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "1JzvCs"
+          },
+          "activity": "${SendActivity_1JzvCs()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "0iFAHn"
+          },
+          "activity": "${SendActivity_0iFAHn()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "XrNPpd"
+          },
+          "activity": "${SendActivity_XrNPpd()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "okmzEr"
+          },
+          "activity": "${SendActivity_okmzEr()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "OVeS5O"
+          },
+          "activity": "${SendActivity_OVeS5O()}"
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "sUEm7J"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ConfirmInput_Prompt_sUEm7J()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true
+          },
+          "property": "dialog.Confirm",
+          "confirmChoices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "Rtqk99"
+          },
+          "condition": "dialog.Confirm==true",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "gQAtUH"
+              },
+              "activity": "${SendActivity_gQAtUH()}"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "1yQ9FW"
+              },
+              "activityProcessed": true,
+              "dialog": "WelcomeDialog"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "Ka1uTG"
+              },
+              "activity": "${SendActivity_Ka1uTG()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "QexDjL"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "SpringDialog.lg",
+  "recognizer": "SpringDialog.lu.qna",
+  "id": "SpringDialog"
+}

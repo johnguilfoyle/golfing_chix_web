@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Golfing Chix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    <link rel="apple-touch-icon" href="https://bbiliveuks.blob.core.windows.net/bbi-beebotai/beebotai/images/apple-icon.png"/>
+    <link rel="icon" type="image/jpg" href="https://bbiliveuks.blob.core.windows.net/bbi-beebotai/beebotai/images/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="https://bbiliveuks.blob.core.windows.net/bbi-beebotai/beebotai/images/favicon-16x16.png" sizes="16x16"/>
+    <link rel="shortcut icon" href="https://bbiliveuks.blob.core.windows.net/bbi-beebotai/beebotai/images/apple-icon.pn"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+
+    <style>
+        body {
+  background-image: url('https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/golfingchix_background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+        #webchat {
+            padding: 10px;
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            height: 90%;
+            width: 400px;
+            background-color: #e6e6e6;
+            border-radius: 15px;
+            font-size: smaller;
+        }
+
+        #openChatIcon {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+        }
+
+        /* Add a hover effect to the chat icon */
+        #openChatIcon img:hover {
+            opacity: 0.8;
+        }
+
+        #closeChatIcon {
+            position: fixed;
+            bottom: 90%;
+            padding-bottom: 15px;
+            right: 15px;
+            z-index: 999;
+        }
+
+        /* Add a hover effect to the chat icon */
+        #closeChatIcon img:hover {
+            opacity: 0.8;
+        }
+        /* Adaptive Card Button Styling */
+ #webchat .ac-pushButton {
+ background-color: #4A3680;
+ border-radius: 5px;
+ border-style: none;
+ color: #ffffff;
+ height: 30px;
+ font-family: 'Poppins';
+ font-size: 11px;
+ }
+
+ #webchat .ac-pushButton:hover {
+ opacity: 0.75;
+ }
+
+ #webchat .webchat__suggested-action__button {
+ background-color: #4A3680;
+ border-radius: 5px;
+ border-style: none;
+ color: #ffffff;
+ height: 30px;
+ font-family: 'Poppins';
+ font-size: 11px;
+ }
+
+ #webchat .webchat__suggested-action__button:hover {
+ opacity: 0.75;
+ }
+
+    </style>
+</head>
+<body>
+
+    <div id="closeChatIcon">
+        <a onclick="closeChat()">
+            <img src="https://bbiliveuks.blob.core.windows.net/bbi-beebotai/beebotai/images/cancel.png" height="24px" alt="Close chat">
+        </a>
+    </div>
+    <div id="openChatIcon">
+        <a onclick="openChat()">
+            <img src="https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/Golfing%20Chix_chatbot%20icon-07.png" height="85px" alt="Let's chat">
+        </a>
+    </div>
+
+    <div id="webchat" class="w3-container w3-mobile">
+    </div>
+    <script>
+
+        let bearer = 'O4Btoyzuf9E.d1yD6NdziHcGvH9_iircxmET7FqitTgj3dPfk_9EG5o';
+
+        (async function () {
+            const styleOptions = {
+                backgroundColor: '#f2f2f2',//'#f5f5f5',
+                primaryFont: 'Poppins',
+                sendBoxButtonColor: '#4A3680',
+                hideUploadButton: true,
+                
+                //bubbles
+                bubbleMaxWidth: '80%',
+                bubbleBackground: '#ffffff',
+                bubbleTextColor: '#003366',
+                bubbleBorderRadius: 15,
+                bubbleFromUserBackground: '#30606A',
+                bubbleFromUserTextColor: '#ffffff',
+                bubbleFromUserBorderRadius: 15
+            };
+ // retrieve conversation and user variables from storage
+ let bbai_uuid = localStorage.getItem('bbai_uuid');
+            let token;
+
+            // if: no user id saved to local storage create random user id ()
+            if (bbai_uuid == null) {
+                var dt = new Date().getTime();
+                var id = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/[x]/g, function (c) {
+                    var r = (dt + Math.random() * 16) % 16 | 0;
+                    dt = Math.floor(dt / 16);
+                    return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+                });
+                bbai_uuid = 'dl_' + id; // ??? directline apparently needs a user_id prefixed with dl_
+                localStorage.setItem('bbai_uuid', bbai_uuid);
+            }
+
+            // else: generate a new conversation
+            const res = await fetch('https://directline.botframework.com/v3/directline/tokens/generate', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ` + bearer,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ user: { id: bbai_uuid, name: 'Beebot' + bbai_uuid } }) // this should pass a user id to the Bot but currently it's not populating the user id variable
+            });
+
+            let { token: directLineToken, conversationId } = await res.json();
+            token = directLineToken;
+            sessionStorage.bbai_conversationId = conversationId;
+            console.log('new conversation started')
+
+            // render the bot with the appropriate token & styling
+            window.WebChat.renderWebChat({
+
+directLine: window.WebChat.createDirectLine({ token }),
+
+styleOptions,
+
+cardActionMiddleware: () => next => async ({ cardAction }) => {
+
+    if (cardAction?.type === 'openUrl') {
+
+            window.open(cardAction.value, '_self');
+
+        }
+
+        return next( { cardAction } );
+
+    },
+    // send the page url to bot for analytics and dialog context
+
+                store: window.WebChat.createStore( {}, ( { dispatch } ) => next => async action => {
+
+                    if ( action.type === 'DIRECT_LINE/CONNECT_FULFILLED' ) {
+
+                        dispatch( {
+
+                            type: 'WEB_CHAT/SEND_EVENT',
+
+                            payload: {
+
+                                name: 'Page Loaded',
+
+                                value: {url: `${ window.location.href }`, title: `${ document.title }`}
+
+                            }
+
+                        })
+
+                    };
+
+                    return next( action );
+
+                })
+
+},
+
+document.getElementById('webchat')
+
+);
+        })();
+
+    </script>
+
+</body>
+</html>
+
+<script type='text/javascript'>
+
+    function openChat() {
+        document.getElementById("webchat").style.display = "block";
+        document.getElementById("openChatIcon").style.display = "none";
+        document.getElementById("closeChatIcon").style.display = "block";
+    }
+
+    function closeChat() {
+        document.getElementById("webchat").style.display = "none";
+        document.getElementById("openChatIcon").style.display = "block";
+        document.getElementById("closeChatIcon").style.display = "none";
+    }
+
+    </script>
+

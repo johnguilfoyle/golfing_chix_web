@@ -1,0 +1,330 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "KsSBYm",
+    "name": "Survey_Dialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "nSj6eh"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "9D9lB7"
+          },
+          "activity": "${SendActivity_9D9lB7()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "maL6Ue"
+          },
+          "activity": "${SendActivity_maL6Ue()}"
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "ZAbsfG"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "prompt": "${ConfirmInput_Prompt_ZAbsfG()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "dialog.confirmSurv",
+          "confirmChoices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "sMMSoi"
+          },
+          "condition": "dialog.confirmSurv==true",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "BjOsCq"
+              },
+              "activity": "${SendActivity_BjOsCq()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "c9jqDw"
+              },
+              "activity": "${SendActivity_c9jqDw()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "exKM54"
+              },
+              "activity": "${SendActivity_exKM54()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "juCSRB"
+              },
+              "activity": "${SendActivity_juCSRB()}"
+            },
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "jv1ufZ"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": true,
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "prompt": "${TextInput_Prompt_jv1ufZ()}",
+              "property": "dialog.brand",
+              "value": "=turn.activity.value.myChoice"
+            },
+            {
+              "$kind": "Microsoft.TelemetryTrackEventAction",
+              "$designer": {
+                "id": "etjjU0"
+              },
+              "eventName": "Survey",
+              "properties": {
+                "SurveyId": "1",
+                "QuestionId": "1",
+                "SurveyResponse": "=dialog.brand"
+              }
+            },
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "O0fEh0"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": true,
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "prompt": "${TextInput_Prompt_O0fEh0()}",
+              "property": "dialog.hear",
+              "value": "=turn.activity.value.myChoice2"
+            },
+            {
+              "$kind": "Microsoft.ChoiceInput",
+              "$designer": {
+                "id": "lZYLcq"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": true,
+              "prompt": "${ChoiceInput_Prompt_lZYLcq()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "choiceOptions": {
+                "includeNumbers": true,
+                "inlineOrMore": ", or ",
+                "inlineOr": " or "
+              },
+              "property": "dialog.stockLadies",
+              "choices": [
+                "Yes",
+                "No"
+              ],
+              "recognizerOptions": {
+                "recognizeOrdinals": true
+              }
+            },
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "LFTqLS"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": true,
+              "prompt": "${TextInput_Prompt_LFTqLS()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "property": "dialog.golfClub"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "DCg98t"
+              },
+              "activity": "${SendActivity_DCg98t()}"
+            },
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "BS0aEy"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": true,
+              "prompt": "${TextInput_Prompt_BS0aEy()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "property": "dialog.Name"
+            },
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "5Kn6YS"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": true,
+              "prompt": "${TextInput_Prompt_5Kn6YS()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "${TextInput_InvalidPrompt_5Kn6YS()}",
+              "property": "dialog.email",
+              "validations": [
+                "=isMatch(this.value, \"\\S+@+\\S+\\.\\S+\")"
+              ]
+            },
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "Af0Pza"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": true,
+              "prompt": "${TextInput_Prompt_Af0Pza()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "${TextInput_InvalidPrompt_Af0Pza()}",
+              "property": "dialog.phone",
+              "validations": [
+                "=isMatch(this.value, \"^[0-9]+$\")"
+              ]
+            },
+            {
+              "$kind": "Microsoft.HttpRequest",
+              "$designer": {
+                "id": "YLfzxY"
+              },
+              "resultProperty": "turn.results",
+              "method": "POST",
+              "url": "https://prod-16.uksouth.logic.azure.com:443/workflows/6ddef47c47e14a588be9373ab538dede/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=2m5PSr7uri8jNSYEEKXzKDByvpllAqAXxWdzYMK-zFg",
+              "contentType": "application/json",
+              "body": {
+                "action": "Survey",
+                "name": "=dialog.name",
+                "email": "=dialog.email",
+                "telephone": "=dialog.phone",
+                "q1": "=dialog.brand",
+                "q2": "=dialog.hear",
+                "q4": "=dialog.stockLadies",
+                "q5": "=dialog.golfClub"
+              }
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "wI9cQY"
+          },
+          "activity": "${SendActivity_wI9cQY()}"
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "UTXQrz"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "prompt": "${ConfirmInput_Prompt_UTXQrz()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "dialog.surveyConfirm",
+          "confirmChoices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "nmzBoV"
+          },
+          "condition": "dialog.surveyConfirm==true",
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "zm8NkH"
+              },
+              "activity": "${SendActivity_zm8NkH()}"
+            }
+          ],
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "uwjqmE"
+              },
+              "activity": "${SendActivity_uwjqmE()}"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "f4I508"
+              },
+              "activityProcessed": true,
+              "dialog": "WelcomeDialog"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "IMNycd"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "Survey_Dialog.lg",
+  "recognizer": "Survey_Dialog.lu.qna",
+  "id": "Survey_Dialog"
+}

@@ -1,0 +1,336 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "aPkzFW",
+    "name": "Book_Dialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "p1reFz"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TelemetryTrackEventAction",
+          "$designer": {
+            "id": "7gFiId"
+          },
+          "eventName": "Goal",
+          "properties": {
+            "GoalId": "1"
+          }
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "dPa8b8"
+          },
+          "activity": "${SendActivity_dPa8b8()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "cIV3qL"
+          },
+          "activity": "${SendActivity_cIV3qL()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "pEu0Ys"
+          },
+          "activity": "${SendActivity_pEu0Ys()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "PxZxmp"
+          },
+          "activity": "${SendActivity_PxZxmp()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "UuUjZ1"
+          },
+          "activity": "${SendActivity_UuUjZ1()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "sbmGnM"
+          },
+          "activity": "${SendActivity_sbmGnM()}"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "n2mTBr"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "prompt": "${TextInput_Prompt_n2mTBr()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "property": "dialog.name"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "7YiuuT"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "prompt": "${TextInput_Prompt_7YiuuT()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "${TextInput_InvalidPrompt_7YiuuT()}",
+          "property": "dialog.phone",
+          "validations": [
+            "=isMatch(this.value, \"^[0-9]+$\")"
+          ]
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "VWvV5F"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "${TextInput_InvalidPrompt_VWvV5F()}",
+          "prompt": "${TextInput_Prompt_VWvV5F()}",
+          "property": "dialog.email",
+          "validations": [
+            "=isMatch(this.value, \"\\S+@+\\S+\\.\\S+\")"
+          ]
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "Fj3HTL"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "prompt": "${ChoiceInput_Prompt_Fj3HTL()}",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or "
+          },
+          "property": "dialog.eventType",
+          "choices": [
+            "Ladies Open",
+            "Charity Day",
+            "Fashion Show",
+            "Other"
+          ],
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "6NAyor"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "prompt": "${TextInput_Prompt_6NAyor()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "property": "dialog.day"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "0Hm5MN"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "prompt": "${TextInput_Prompt_0Hm5MN()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "property": "dialog.time"
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "fLLr2O"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or "
+          },
+          "prompt": "${ConfirmInput_Prompt_fLLr2O()}",
+          "property": "dialog.bookConfirm",
+          "confirmChoices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "MlV780"
+          },
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "VDLihu"
+              },
+              "activity": "${SendActivity_VDLihu()}"
+            },
+            {
+              "$kind": "Microsoft.HttpRequest",
+              "$designer": {
+                "id": "i1wmIm"
+              },
+              "resultProperty": "turn.results",
+              "method": "POST",
+              "url": "https://prod-25.uksouth.logic.azure.com:443/workflows/1b909c3c18ef499b9f464cd647489db4/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=WXVnQyiyUw28F_x5CNp0MsUUCzHeZ_OD_ICJ5oiN2x4",
+              "body": {
+                "action": "Free Consultation",
+                "name": "=dialog.name",
+                "email": "=dialog.email",
+                "phone": "=dialog.phone",
+                "location": "=dialog.day",
+                "date": "=dialog.time",
+                "eventType": "=dialog.eventType"
+              },
+              "contentType": "application/json"
+            },
+            {
+              "$kind": "Microsoft.TelemetryTrackEventAction",
+              "$designer": {
+                "id": "xOrSoE"
+              },
+              "eventName": "Goal",
+              "properties": {
+                "GoalId": "1",
+                "GoalCompleted": "1"
+              }
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "MOBXkg"
+              },
+              "activity": "${SendActivity_MOBXkg()}"
+            },
+            {
+              "$kind": "Microsoft.RepeatDialog",
+              "$designer": {
+                "id": "JMl1Eb"
+              },
+              "activityProcessed": true
+            }
+          ],
+          "condition": "dialog.bookConfirm==true"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "bv2bDN"
+          },
+          "activity": "${SendActivity_bv2bDN()}"
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "A4LGiE"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${ConfirmInput_Prompt_A4LGiE()}",
+          "choiceOptions": {
+            "includeNumbers": true
+          },
+          "property": "dialog.confirm",
+          "confirmChoices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "b9P2dF"
+          },
+          "condition": "dialog.confirm==true",
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "2n49AH"
+              },
+              "activity": "${SendActivity_2n49AH()}"
+            }
+          ],
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "WtdI7m"
+              },
+              "activity": "${SendActivity_WtdI7m()}"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "WnDleu"
+              },
+              "activityProcessed": true,
+              "dialog": "WelcomeDialog"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "ugShyE"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "Book_Dialog.lg",
+  "recognizer": "Book_Dialog.lu.qna",
+  "id": "Book_Dialog"
+}

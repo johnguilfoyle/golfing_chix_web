@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_Survey_Dialog",
+  "recognizers": {
+    "en-us": "Survey_Dialog.en-us.lu",
+    "": "Survey_Dialog.en-us.lu"
+  }
+}

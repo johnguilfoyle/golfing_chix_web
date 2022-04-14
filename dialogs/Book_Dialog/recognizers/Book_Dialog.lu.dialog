@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_Book_Dialog",
+  "recognizers": {
+    "en-us": "Book_Dialog.en-us.lu",
+    "": "Book_Dialog.en-us.lu"
+  }
+}

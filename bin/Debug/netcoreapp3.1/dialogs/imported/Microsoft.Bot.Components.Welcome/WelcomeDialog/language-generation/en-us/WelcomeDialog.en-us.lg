@@ -1,0 +1,332 @@
+[import](common.lg)
+
+# Welcome_Card()
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "Media",
+            "poster": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/video1.png",
+            "sources": [
+                {
+                    "mimeType": "video/mp4",
+                    "url": "https://vimeo.com/505315942"
+                }
+            ]
+        }
+    ]
+}```
+
+# SendActivity_f3uG2y()
+[Activity
+    Attachments = ${json(SendActivity_f3uG2y_attachment_W8Kviq())}
+]
+
+# SendActivity_f3uG2y_attachment_W8Kviq()
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "Image",
+            "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/GolfingChix.jpeg",
+            "altText": "GolfingChix"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "RichTextBlock",
+                    "inlines": [
+                        {
+                            "type": "TextRun",
+                            "text": "Welcome",
+                            "weight": "Bolder",
+                            "size": "Large"
+                        }
+                    ]
+                },
+                {
+                    "type": "RichTextBlock",
+                    "inlines": [
+                        {
+                            "separator": true,
+                            "type": "TextRun",
+                            "text": "I'm the Golfing Chix Bot",
+                            "weight": "Bolder",
+                            "highlight": true
+                        }
+                    ]
+                },
+                {
+                    "type": "RichTextBlock",
+                    "inlines": [
+                        {
+                            "separator": true,
+                            "type": "TextRun",
+                            "text": "How can I help you today?"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Spring Collection",
+                            "data": "Spring Collection"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Latest Offers",
+                            "data": "Latest Offers"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Book a Free Consultation",
+                            "data": "Book a Free Consultation"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Win a Prize",
+                            "data": "Win a Prize"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Ask a Question",
+                            "data": "Ask a Question"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Leave Feedback",
+                            "data": "Leave Feedback"
+                        }
+                    ]
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Why Not Follow us on Instagram\n",
+                                    "wrap": true,
+                                    "weight": "Bolder",
+                                    "horizontalAlignment": "Center"
+                                },
+                                {
+                                    "type": "Image",
+                                    "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/Instagram-logo.png",
+                                    "size": "Medium",
+                                    "selectAction": {
+                                        "type": "Action.OpenUrl",
+                                        "url": "https://www.instagram.com/golfingchixblog/"
+                                    },
+                                    "horizontalAlignment": "Center"
+                                }
+                            ],
+                            "horizontalAlignment": "Center"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}```
+# SendActivity_PsAJ3p()
+[Activity
+    Attachments = ${json(SendActivity_PsAJ3p_attachment_wGeNCu())}
+]
+
+# SendActivity_PsAJ3p_attachment_wGeNCu()
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "Image",
+            "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/GolfingChix.jpeg",
+            "altText": "GolfingChix"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "RichTextBlock",
+                    "inlines": [
+                        {
+                            "type": "TextRun",
+                            "text": "Welcome",
+                            "weight": "Bolder",
+                            "size": "Large"
+                        }
+                    ]
+                },
+                {
+                    "type": "RichTextBlock",
+                    "inlines": [
+                        {
+                            "separator": true,
+                            "type": "TextRun",
+                            "text": "I'm the Golfing Chix Bot",
+                            "weight": "Bolder",
+                            "highlight": true
+                        }
+                    ]
+                },
+                {
+                    "type": "RichTextBlock",
+                    "inlines": [
+                        {
+                            "separator": true,
+                            "type": "TextRun",
+                            "text": "How can I help you today?"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Spring Collection",
+                            "data": "Spring Collection"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Latest Offers",
+                            "data": "Latest Offers"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Book a Free Consultation",
+                            "data": "Book a Free Consultation"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Win a Prize",
+                            "data": "Win a Prize"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Ask a Question",
+                            "data": "Ask a Question"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Leave Feedback",
+                            "data": "Leave Feedback"
+                        }
+                    ]
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Why Not Follow us on Instagram\n",
+                                    "wrap": true,
+                                    "weight": "Bolder",
+                                    "horizontalAlignment": "Center"
+                                },
+                                {
+                                    "type": "Image",
+                                    "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/Instagram-logo.png",
+                                    "size": "Medium",
+                                    "selectAction": {
+                                        "type": "Action.OpenUrl",
+                                        "url": "https://www.instagram.com/golfingchixblog/"
+                                    },
+                                    "horizontalAlignment": "Center"
+                                }
+                            ],
+                            "horizontalAlignment": "Center"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}```
+# SendActivity_MsBTmI()
+[Activity
+    Attachments = ${json(Video_Card())} | ${json(Video_Card())} | ${json(Video_Card())}
+    AttachmentLayout = carousel
+]
+
+# SendActivity_eR9Ent()
+[Activity
+    Attachments = ${json(Welcome_Card())} | ${json(Welcome_Card())} | ${json(Welcome_Card())}
+    AttachmentLayout = carousel
+]
+
+# Video_Card()
+[VideoCard
+    title = Big Buck Bunny
+    subtitle = by the Blender Institute
+    text = Big Buck Bunny (code-named Peach) is a short computer-animated comedy film by the Blender Institute
+    image = https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Big_buck_bunny_poster_big.jpg/220px-Big_buck_bunny_poster_big.jpg
+    media = http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4
+    buttons = Learn More
+]

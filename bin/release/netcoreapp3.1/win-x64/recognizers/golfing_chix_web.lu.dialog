@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_golfing_chix_web",
+  "recognizers": {
+    "en-us": "golfing_chix_web.en-us.lu",
+    "": "golfing_chix_web.en-us.lu"
+  }
+}

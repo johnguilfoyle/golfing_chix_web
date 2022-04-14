@@ -1,0 +1,458 @@
+[import](common.lg)
+
+# SendActivity_Zcjwvt()
+[Activity
+    Text = ${SendActivity_Zcjwvt_text()}
+]
+
+# SendActivity_Zcjwvt_text()
+- Lets see if we can answer some of your questions below...
+# SendActivity_g2BzM4()
+[Activity
+    Text = ${SendActivity_g2BzM4_text()}
+]
+
+# SendActivity_g2BzM4_text()
+- Here are some frequently asked questions..you can also ask the bot any questions directly by entering it below. 
+# TextInput_Prompt_0IMIvm()
+[Activity
+    Attachments = ${json(TextInput_Prompt_0IMIvm_attachment_ywgMJT())}
+]
+
+# TextInput_Prompt_0IMIvm_attachment_ywgMJT()
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "Image",
+            "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/GolfingChix.jpeg",
+            "altText": "GolfingChix"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "RichTextBlock",
+                    "inlines": [
+                        {
+                            "type": "TextRun",
+                            "text": "FAQs",
+                            "weight": "Bolder",
+                            "size": "Large"
+                        }
+                    ],
+                    "horizontalAlignment": "Center"
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.ToggleVisibility",
+                            "title": "Where is my confirmation email?",
+                            "targetElements": [
+                                "1"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Firstly, please check that you entered the correct email address to receive email correspondence from us. Secondly, check your spam/junk folders as we can be occasionally filtered into these if we have not been added to your safe sender's list. If you still don't have an email from us, please contact us at  golfingchix10@gmail.com  ",
+                    "wrap": true,
+                    "isVisible": false,
+                    "id": "1"
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.ToggleVisibility",
+                            "title": "Can I exchange an item?",
+                            "targetElements": [
+                                "2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Yes of course! If the item doesn't fit, doesn't suit you or you just don't like an item you have ordered from us we can exchange for another other item on our website. If the exchanged item is less expensive we will refund the difference, if the item is more expensive we can take an additional payment to cover the difference. For an exchange please give us a call on 0333 0503810 or email golfingchix10@gmail.com   prior to returning the item so we can reserve the item you would like to exchange for.",
+                    "wrap": true,
+                    "isVisible": false,
+                    "id": "2"
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.ToggleVisibility",
+                            "title": "Have you received my returned item?",
+                            "targetElements": [
+                                "3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "If you're returning from the UK, it can usually take up to 10 days (excluding weekends and bank holidays) from the day after the date of your return for your parcel to be delivered back to our warehouse and processed. We'll send you an email as soon as we've completed your return. Any refund will be automatically issued to the payment method you used to place your original order. This typically takes 10 working days depending on your payment provider. If your returns haven't reached us after the returns timeframe, please get in touch with your proof of postage so we can help you further.",
+                    "wrap": true,
+                    "isVisible": false,
+                    "id": "3"
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.ToggleVisibility",
+                            "title": "How do loyalty points work?",
+                            "targetElements": [
+                                "4"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Earn as you shop for discounts against future orders . You will earn 2 points for every £1 you spend.",
+                    "wrap": true,
+                    "isVisible": false,
+                    "id": "4"
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.ToggleVisibility",
+                            "title": "The size/item I want is not in stock",
+                            "targetElements": [
+                                "5"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "If the size/item you are after is not currently in stock, pop us an email at golfingchix10@gmail.com and we will do our best to source it for you.",
+                    "wrap": true,
+                    "isVisible": false,
+                    "id": "5"
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.ToggleVisibility",
+                            "title": "How do I cancel an order?",
+                            "targetElements": [
+                                "6"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "If you need to cancel your order please email us at golfingchix10@gmail.com. Please note if we have already dispatched the item you will incur postage charges",
+                    "wrap": true,
+                    "isVisible": false,
+                    "id": "6"
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.ToggleVisibility",
+                            "title": "Do you do private events or pop up’s at golf clubs?",
+                            "targetElements": [
+                                "7"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Yes, we do! Depending on your location we can visit your club with our pop-up shop. Give us a call on 0300 0503810 or send us an email at golfingchix10@gmail.com ",
+                    "wrap": true,
+                    "isVisible": false,
+                    "id": "7"
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.ToggleVisibility",
+                            "title": "What risks ar involved buying online?",
+                            "targetElements": [
+                                "8"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "All personal data, including your card number is transmitted over secure connections, meaning that no-one can 'eavesdrop' and capture your details. In addition to this, your card details are not viewable by us at all, they are simply transmitted over the bank's private X25 network for authorisation and payment transactions. You are protected because the transaction was carried out as 'Cardholder not present.' This means that any payments will be refunded to your card should it be used fraudulently by someone else or you do not receive what you ordered.\n",
+                    "wrap": true,
+                    "isVisible": false,
+                    "id": "8"
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.ToggleVisibility",
+                            "title": "What forms of payment do you take?",
+                            "targetElements": [
+                                "9"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "We accept the following: Visa, Mastercard, and PayPal.",
+                    "wrap": true,
+                    "isVisible": false,
+                    "id": "9"
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Do you have size guides?",
+                            "data": "Size Guides"
+                        }
+                    ]
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Ask any other questions",
+                            "data": "Ask a question"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}```
+# SendActivity_leLnxa()
+[Activity
+    Value = ${3000}
+    Type = ${"delay"}
+]
+
+# ChoiceInput_Prompt_pcYaNV()
+[Activity
+    Text = ${ChoiceInput_Prompt_pcYaNV_text()}
+]
+
+# ChoiceInput_Prompt_pcYaNV_text()
+- Which brand would you like to get a size guide for?
+# SendActivity_IAuDSt()
+[Activity
+    Text = ${SendActivity_IAuDSt_text()}
+]
+
+# SendActivity_IAuDSt_text()
+- Great, let me show you how the sizing works for that brand...
+# SendActivity_2Rnkqn()
+[Activity
+    Text = ${SendActivity_2Rnkqn_text()}
+]
+
+# SendActivity_2Rnkqn_text()
+- Here's the size guide for Tail...
+# SendActivity_AOIIoI()
+[Activity
+    Attachments = ${json(SendActivity_AOIIoI_attachment_iiUxn5())}
+]
+
+# SendActivity_AOIIoI_attachment_iiUxn5()
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+       {
+            "type": "TextBlock",
+            "text": "Click to enlarge",
+            "wrap": true
+        },
+        {
+            "type": "Image",
+            "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/tailsize.jpg",
+            "size": "Stretch",
+            "selectAction": {
+                "type": "Action.OpenUrl",
+                "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/tailsize.jpg"
+            }
+        }
+    ]
+}```
+# SendActivity_t4RLz5()
+[Activity
+    Text = ${SendActivity_t4RLz5_text()}
+]
+
+# SendActivity_t4RLz5_text()
+- Here's the size guide for Daily Sports
+# SendActivity_U7GzTR()
+[Activity
+    Attachments = ${json(SendActivity_U7GzTR_attachment_18wUGl())}
+]
+
+# SendActivity_U7GzTR_attachment_18wUGl()
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+    {
+            "type": "TextBlock",
+            "text": "Click to enlarge",
+            "wrap": true
+        },
+        {
+            "type": "Image",
+            "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/dailysports.png",
+            "selectAction": {
+                "type": "Action.OpenUrl",
+                "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/dailysports.png"
+            }
+        }
+    ]
+}```
+# SendActivity_vSN5HB()
+[Activity
+    Text = ${SendActivity_vSN5HB_text()}
+]
+
+# SendActivity_vSN5HB_text()
+- Here's the size guide for Pure Golf
+# SendActivity_BCtwsF()
+[Activity
+    Attachments = ${json(SendActivity_BCtwsF_attachment_8wB5Iv())}
+]
+
+# SendActivity_BCtwsF_attachment_8wB5Iv()
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+    {
+            "type": "TextBlock",
+            "text": "Click to enlarge",
+            "wrap": true
+        },
+            {
+            "type": "Image",
+            "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/puresize.jpeg",
+            "selectAction": {
+                "type": "Action.OpenUrl",
+                "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/puresize.jpeg"
+            }
+        }
+    ]
+}```
+# SendActivity_HSp5tL()
+[Activity
+    Text = ${SendActivity_HSp5tL_text()}
+]
+
+# SendActivity_HSp5tL_text()
+- Here's the size guide for Duca Del Cosma
+# SendActivity_UBa4Y1()
+[Activity
+    Attachments = ${json(SendActivity_UBa4Y1_attachment_mL3UeH())}
+]
+
+# SendActivity_UBa4Y1_attachment_mL3UeH()
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+    {
+            "type": "TextBlock",
+            "text": "Click to enlarge",
+            "wrap": true
+        },        {
+            "type": "Image",
+            "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/ducasize.jpg",
+            "selectAction": {
+                "type": "Action.OpenUrl",
+                "url": "https://bbiprod.blob.core.windows.net/bbi-golfingchix/golfingchix/images/ducasize.jpg"
+            }
+    
+        }
+    ]
+}```
+# ConfirmInput_Prompt_ocNl6R()
+[Activity
+    Text = ${ConfirmInput_Prompt_ocNl6R_text()}
+]
+
+# ConfirmInput_Prompt_ocNl6R_text()
+- Do you have any other questions?
+# SendActivity_Ut9550()
+[Activity
+    Text = ${SendActivity_Ut9550_text()}
+]
+
+# SendActivity_Ut9550_text()
+- Great, let me show you some mor faqs...
+# SendActivity_rERPQc()
+[Activity
+    Text = ${SendActivity_rERPQc_text()}
+]
+
+# SendActivity_rERPQc_text()
+- No problem. Thanks for speaking to me today.
+# SendActivity_h13Jr6()
+[Activity
+    Text = ${SendActivity_h13Jr6_text()}
+]
+
+# SendActivity_h13Jr6_text()
+- Please feel free to enter any questions you may have...one of our experts will come back to you with the answers.
+# TextInput_Prompt_HE5WZz()
+[Activity
+    Text = ${TextInput_Prompt_HE5WZz_text()}
+]
+
+# TextInput_Prompt_HE5WZz_text()
+- First, can you tell me your name?
+# TextInput_Prompt_BV5XVR()
+[Activity
+    Text = ${TextInput_Prompt_BV5XVR_text()}
+]
+
+# TextInput_Prompt_BV5XVR_text()
+- And your email address?
+# TextInput_Prompt_ep3nfK()
+[Activity
+    Text = ${TextInput_Prompt_ep3nfK_text()}
+]
+
+# TextInput_Prompt_ep3nfK_text()
+- and your phone number?
+# TextInput_Prompt_gdUWzS()
+[Activity
+    Text = ${TextInput_Prompt_gdUWzS_text()}
+]
+
+# TextInput_Prompt_gdUWzS_text()
+- and finally, whats your question?
+# SendActivity_RJcaWH()
+[Activity
+    Text = ${SendActivity_RJcaWH_text()}
+]
+
+# SendActivity_RJcaWH_text()
+- Thanks, I have sent your question to our expert who will get back to you with an answer in the next 24 hours.

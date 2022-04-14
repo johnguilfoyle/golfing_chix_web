@@ -1,0 +1,40 @@
+[import](common.lg)
+
+# SendActivity_1JzvCs()
+[Activity
+    Text = ${SendActivity_1JzvCs_text()}
+]
+
+# SendActivity_1JzvCs_text()
+- Why not have a look at our great spring collection, new in. 
+# SendActivity_0iFAHn()
+[Activity
+    Attachments = ${json(SendActivity_0iFAHn_attachment_DVDC5m())}
+]
+
+# SendActivity_0iFAHn_attachment_DVDC5m()
+- ```{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "SPRING 2022",
+            "wrap": true,
+            "weight": "Bolder",
+            "size": "Large",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "View New Arrivals",
+                    "url": "https://www.golfingchix.co.uk/new-arrivals-125-c.asp"
+                }
+            ]
+        }
+    ]
+}```

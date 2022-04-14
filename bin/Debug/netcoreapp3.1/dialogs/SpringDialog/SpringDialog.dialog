@@ -1,0 +1,45 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "Zhci6o",
+    "name": "SpringDialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "uP8JCA"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "1JzvCs"
+          },
+          "activity": "${SendActivity_1JzvCs()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "0iFAHn"
+          },
+          "activity": "${SendActivity_0iFAHn()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "QexDjL"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "SpringDialog.lg",
+  "recognizer": "SpringDialog.lu.qna",
+  "id": "SpringDialog"
+}
